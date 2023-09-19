@@ -165,101 +165,101 @@ namespace Hazel {
 		body->SetType(Utils::Rigidbody2DTypeToBox2DBody(bodyType));
 	}
 
-	static MonoString* TextComponent_GetText(UUID entityID)
-	{
-		Scene* scene = ScriptEngine::GetSceneContext();
-		HZ_CORE_ASSERT(scene);
-		Entity entity = scene->GetEntityByUUID(entityID);
-		HZ_CORE_ASSERT(entity);
-		HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
+	// static MonoString* TextComponent_GetText(UUID entityID)
+	// {
+	// 	Scene* scene = ScriptEngine::GetSceneContext();
+	// 	HZ_CORE_ASSERT(scene);
+	// 	Entity entity = scene->GetEntityByUUID(entityID);
+	// 	HZ_CORE_ASSERT(entity);
+	// 	HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
 
-		auto& tc = entity.GetComponent<TextComponent>();
-		return ScriptEngine::CreateString(tc.TextString.c_str());
-	}
+	// 	auto& tc = entity.GetComponent<TextComponent>();
+	// 	return ScriptEngine::CreateString(tc.TextString.c_str());
+	// }
 
-	static void TextComponent_SetText(UUID entityID, MonoString* textString)
-	{
-		Scene* scene = ScriptEngine::GetSceneContext();
-		HZ_CORE_ASSERT(scene);
-		Entity entity = scene->GetEntityByUUID(entityID);
-		HZ_CORE_ASSERT(entity);
-		HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
+	// static void TextComponent_SetText(UUID entityID, MonoString* textString)
+	// {
+	// 	Scene* scene = ScriptEngine::GetSceneContext();
+	// 	HZ_CORE_ASSERT(scene);
+	// 	Entity entity = scene->GetEntityByUUID(entityID);
+	// 	HZ_CORE_ASSERT(entity);
+	// 	HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
 
-		auto& tc = entity.GetComponent<TextComponent>();
-		tc.TextString = Utils::MonoStringToString(textString);
-	}
+	// 	auto& tc = entity.GetComponent<TextComponent>();
+	// 	tc.TextString = Utils::MonoStringToString(textString);
+	// }
 
-	static void TextComponent_GetColor(UUID entityID, glm::vec4* color)
-	{
-		Scene* scene = ScriptEngine::GetSceneContext();
-		HZ_CORE_ASSERT(scene);
-		Entity entity = scene->GetEntityByUUID(entityID);
-		HZ_CORE_ASSERT(entity);
-		HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
+	// static void TextComponent_GetColor(UUID entityID, glm::vec4* color)
+	// {
+	// 	Scene* scene = ScriptEngine::GetSceneContext();
+	// 	HZ_CORE_ASSERT(scene);
+	// 	Entity entity = scene->GetEntityByUUID(entityID);
+	// 	HZ_CORE_ASSERT(entity);
+	// 	HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
 
-		auto& tc = entity.GetComponent<TextComponent>();
-		*color = tc.Color;
-	}
+	// 	auto& tc = entity.GetComponent<TextComponent>();
+	// 	*color = tc.Color;
+	// }
 
-	static void TextComponent_SetColor(UUID entityID, glm::vec4* color)
-	{
-		Scene* scene = ScriptEngine::GetSceneContext();
-		HZ_CORE_ASSERT(scene);
-		Entity entity = scene->GetEntityByUUID(entityID);
-		HZ_CORE_ASSERT(entity);
-		HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
+	// static void TextComponent_SetColor(UUID entityID, glm::vec4* color)
+	// {
+	// 	Scene* scene = ScriptEngine::GetSceneContext();
+	// 	HZ_CORE_ASSERT(scene);
+	// 	Entity entity = scene->GetEntityByUUID(entityID);
+	// 	HZ_CORE_ASSERT(entity);
+	// 	HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
 
-		auto& tc = entity.GetComponent<TextComponent>();
-		tc.Color = *color;
-	}
+	// 	auto& tc = entity.GetComponent<TextComponent>();
+	// 	tc.Color = *color;
+	// }
 
-	static float TextComponent_GetKerning(UUID entityID)
-	{
-		Scene* scene = ScriptEngine::GetSceneContext();
-		HZ_CORE_ASSERT(scene);
-		Entity entity = scene->GetEntityByUUID(entityID);
-		HZ_CORE_ASSERT(entity);
-		HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
+	// static float TextComponent_GetKerning(UUID entityID)
+	// {
+	// 	Scene* scene = ScriptEngine::GetSceneContext();
+	// 	HZ_CORE_ASSERT(scene);
+	// 	Entity entity = scene->GetEntityByUUID(entityID);
+	// 	HZ_CORE_ASSERT(entity);
+	// 	HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
 
-		auto& tc = entity.GetComponent<TextComponent>();
-		return tc.Kerning;
-	}
+	// 	auto& tc = entity.GetComponent<TextComponent>();
+	// 	return tc.Kerning;
+	// }
 
-	static void TextComponent_SetKerning(UUID entityID, float kerning)
-	{
-		Scene* scene = ScriptEngine::GetSceneContext();
-		HZ_CORE_ASSERT(scene);
-		Entity entity = scene->GetEntityByUUID(entityID);
-		HZ_CORE_ASSERT(entity);
-		HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
+	// static void TextComponent_SetKerning(UUID entityID, float kerning)
+	// {
+	// 	Scene* scene = ScriptEngine::GetSceneContext();
+	// 	HZ_CORE_ASSERT(scene);
+	// 	Entity entity = scene->GetEntityByUUID(entityID);
+	// 	HZ_CORE_ASSERT(entity);
+	// 	HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
 
-		auto& tc = entity.GetComponent<TextComponent>();
-		tc.Kerning = kerning;
-	}
+	// 	auto& tc = entity.GetComponent<TextComponent>();
+	// 	tc.Kerning = kerning;
+	// }
 
-	static float TextComponent_GetLineSpacing(UUID entityID)
-	{
-		Scene* scene = ScriptEngine::GetSceneContext();
-		HZ_CORE_ASSERT(scene);
-		Entity entity = scene->GetEntityByUUID(entityID);
-		HZ_CORE_ASSERT(entity);
-		HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
+	// static float TextComponent_GetLineSpacing(UUID entityID)
+	// {
+	// 	Scene* scene = ScriptEngine::GetSceneContext();
+	// 	HZ_CORE_ASSERT(scene);
+	// 	Entity entity = scene->GetEntityByUUID(entityID);
+	// 	HZ_CORE_ASSERT(entity);
+	// 	HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
 
-		auto& tc = entity.GetComponent<TextComponent>();
-		return tc.LineSpacing;
-	}
+	// 	auto& tc = entity.GetComponent<TextComponent>();
+	// 	return tc.LineSpacing;
+	// }
 
-	static void TextComponent_SetLineSpacing(UUID entityID, float lineSpacing)
-	{
-		Scene* scene = ScriptEngine::GetSceneContext();
-		HZ_CORE_ASSERT(scene);
-		Entity entity = scene->GetEntityByUUID(entityID);
-		HZ_CORE_ASSERT(entity);
-		HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
+	// static void TextComponent_SetLineSpacing(UUID entityID, float lineSpacing)
+	// {
+	// 	Scene* scene = ScriptEngine::GetSceneContext();
+	// 	HZ_CORE_ASSERT(scene);
+	// 	Entity entity = scene->GetEntityByUUID(entityID);
+	// 	HZ_CORE_ASSERT(entity);
+	// 	HZ_CORE_ASSERT(entity.HasComponent<TextComponent>());
 
-		auto& tc = entity.GetComponent<TextComponent>();
-		tc.LineSpacing = lineSpacing;
-	}
+	// 	auto& tc = entity.GetComponent<TextComponent>();
+	// 	tc.LineSpacing = lineSpacing;
+	// }
 
 	static bool Input_IsKeyDown(KeyCode keycode)
 	{
@@ -318,14 +318,14 @@ namespace Hazel {
 		HZ_ADD_INTERNAL_CALL(Rigidbody2DComponent_GetType);
 		HZ_ADD_INTERNAL_CALL(Rigidbody2DComponent_SetType);
 		
-		HZ_ADD_INTERNAL_CALL(TextComponent_GetText);
-		HZ_ADD_INTERNAL_CALL(TextComponent_SetText);
-		HZ_ADD_INTERNAL_CALL(TextComponent_GetColor);
-		HZ_ADD_INTERNAL_CALL(TextComponent_SetColor);
-		HZ_ADD_INTERNAL_CALL(TextComponent_GetKerning);
-		HZ_ADD_INTERNAL_CALL(TextComponent_SetKerning);
-		HZ_ADD_INTERNAL_CALL(TextComponent_GetLineSpacing);
-		HZ_ADD_INTERNAL_CALL(TextComponent_SetLineSpacing);
+		// HZ_ADD_INTERNAL_CALL(TextComponent_GetText);
+		// HZ_ADD_INTERNAL_CALL(TextComponent_SetText);
+		// HZ_ADD_INTERNAL_CALL(TextComponent_GetColor);
+		// HZ_ADD_INTERNAL_CALL(TextComponent_SetColor);
+		// HZ_ADD_INTERNAL_CALL(TextComponent_GetKerning);
+		// HZ_ADD_INTERNAL_CALL(TextComponent_SetKerning);
+		// HZ_ADD_INTERNAL_CALL(TextComponent_GetLineSpacing);
+		// HZ_ADD_INTERNAL_CALL(TextComponent_SetLineSpacing);
 
 		HZ_ADD_INTERNAL_CALL(Input_IsKeyDown);
 	}

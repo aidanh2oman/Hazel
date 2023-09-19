@@ -255,15 +255,15 @@ namespace Hazel {
 			}
 
 			// Draw text
-			{
-				auto view = m_Registry.view<TransformComponent, TextComponent>();
-				for (auto entity : view)
-				{
-					auto [transform, text] = view.get<TransformComponent, TextComponent>(entity);
+			// {
+			// 	auto view = m_Registry.view<TransformComponent, TextComponent>();
+			// 	for (auto entity : view)
+			// 	{
+			// 		auto [transform, text] = view.get<TransformComponent, TextComponent>(entity);
 
-					Renderer2D::DrawString(text.TextString, transform.GetTransform(), text, (int)entity);
-				}
-			}
+			// 		// Renderer2D::DrawString(text.TextString, transform.GetTransform(), text, (int)entity);
+			// 	}
+			// }
 
 			Renderer2D::EndScene();
 		}
@@ -460,15 +460,15 @@ namespace Hazel {
 		}
 
 		// Draw text
-		{
-			auto view = m_Registry.view<TransformComponent, TextComponent>();
-			for (auto entity : view)
-			{
-				auto [transform, text] = view.get<TransformComponent, TextComponent>(entity);
+		// {
+		// 	auto view = m_Registry.view<TransformComponent, TextComponent>();
+		// 	for (auto entity : view)
+		// 	{
+		// 		auto [transform, text] = view.get<TransformComponent, TextComponent>(entity);
 
-				Renderer2D::DrawString(text.TextString, transform.GetTransform(), text, (int)entity);
-			}
-		}
+		// 		Renderer2D::DrawString(text.TextString, transform.GetTransform(), text, (int)entity);
+		// 	}
+		// }
 
 		Renderer2D::EndScene();
 	}
@@ -536,9 +536,9 @@ namespace Hazel {
 	{
 	}
 
-	template<>
-	void Scene::OnComponentAdded<TextComponent>(Entity entity, TextComponent& component)
-	{
-	}
+	// template<>
+	// void Scene::OnComponentAdded<TextComponent>(Entity entity, TextComponent& component)
+	// {
+	// }
 
 }

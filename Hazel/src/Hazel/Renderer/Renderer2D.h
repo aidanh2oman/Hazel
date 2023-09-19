@@ -6,7 +6,7 @@
 
 #include "Hazel/Renderer/Camera.h"
 #include "Hazel/Renderer/EditorCamera.h"
-#include "Hazel/Renderer/Font.h"
+// #include "Hazel/Renderer/Font.h"
 
 #include "Hazel/Scene/Components.h"
 
@@ -53,8 +53,8 @@ namespace Hazel {
 			float Kerning = 0.0f;
 			float LineSpacing = 0.0f;
 		};
-		static void DrawString(const std::string& string, Ref<Font> font, const glm::mat4& transform, const TextParams& textParams, int entityID = -1);
-		static void DrawString(const std::string& string, const glm::mat4& transform, const TextComponent& component, int entityID = -1);
+		// static void DrawString(const std::string& string, Ref<Font> font, const glm::mat4& transform, const TextParams& textParams, int entityID = -1);
+		// static void DrawString(const std::string& string, const glm::mat4& transform, const TextComponent& component, int entityID = -1);
 
 		static float GetLineWidth();
 		static void SetLineWidth(float width);
