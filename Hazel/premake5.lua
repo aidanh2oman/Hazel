@@ -32,6 +32,7 @@ project "Hazel"
 	includedirs
 	{
 		"src",
+		"vendor/tracktion_engine",
 		"vendor/spdlog/include",
 		"%{IncludeDir.Box2D}",
 		"%{IncludeDir.filewatch}",
@@ -44,7 +45,6 @@ project "Hazel"
 		"%{IncludeDir.mono}",
 		"%{IncludeDir.yaml_cpp}",
 		"%{IncludeDir.ImGuizmo}",
-		"%{IncudeDir.tracktion}",
 		"%{IncludeDir.VulkanSDK}"
 	}
 
@@ -58,7 +58,6 @@ project "Hazel"
 		"opengl32.lib",
 
 		"%{Library.mono}",
-		"tracktion"
 	}
 
 	filter "files:vendor/ImGuizmo/**.cpp"
