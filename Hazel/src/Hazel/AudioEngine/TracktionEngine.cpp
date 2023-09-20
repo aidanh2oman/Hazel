@@ -1,25 +1,31 @@
 #include "hzpch.h"
 #include "Hazel/AudioEngine/TracktionEngine.h"
 
-#include "Hazel/AudioEngine/AudioEngineCommand.h"
+// #include "Hazel/vendor/tracktion_engine/examples/common/Utilities.h"
 
 namespace Hazel {
 
     void TracktionEngine::Init()
     {
         HZ_CORE_INFO("Initializing Tracktion Engine");
-        // AudioEngineCommand::Init();
         // TODO init tracktion engine
+
     }
 
     void TracktionEngine::Shutdown()
     {
         HZ_CORE_INFO("Shutting down Tracktion Engine");
-        // AudioEngineCommand::Shutdown();
+        // TODO shutdown tracktion engine
     }
 
     void TracktionEngine::Play()
     {
-        // AudioEngineCommand::Play();
+        // TODO
+        HZ_CORE_INFO("Playing Tracktion Engine");
     }
+
+    // void TracktionEngine::changeListenerCallback(ChangeBroadcaster* source)
+    // {
+    //     // TODO
+    // }
 }

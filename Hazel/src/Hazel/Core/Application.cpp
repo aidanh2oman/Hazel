@@ -32,6 +32,7 @@ namespace Hazel {
 
 		Renderer::Init();
 		AudioEngine::Init();
+		// m_AudioEngine = new AudioEngine();
 
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);

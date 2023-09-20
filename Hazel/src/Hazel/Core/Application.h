@@ -70,6 +70,7 @@ namespace Hazel {
 		ApplicationSpecification m_Specification;
 		Scope<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
+		// AudioEngine* m_AudioEngine;
 		
 		bool m_Running = true;
 		bool m_Minimized = false;

@@ -197,11 +197,6 @@ namespace Hazel {
 		{
 			if (ImGui::BeginMenu("File"))
 			{
-				if (ImGui::MenuItem("Play Audio"))
-					// PlayAudio();
-
-				ImGui::Separator();
-
 				if (ImGui::MenuItem("Open Project...", "Ctrl+O"))
 					OpenProject();
 
@@ -229,6 +224,14 @@ namespace Hazel {
 				if (ImGui::MenuItem("Reload assembly", "Ctrl+R"))
 					ScriptEngine::ReloadAssembly();
 				
+				ImGui::EndMenu();
+			}
+
+			if (ImGui::BeginMenu("Audio"))
+			{
+				if (ImGui::MenuItem("Play Audio"))
+					PlayAudio();
+
 				ImGui::EndMenu();
 			}
 
@@ -779,7 +782,7 @@ namespace Hazel {
 
 	void EditorLayer::PlayAudio()
 	{
-		AudioEngineCommand::Play();
+		AudioEngine::Play();
 	}
 
 }
