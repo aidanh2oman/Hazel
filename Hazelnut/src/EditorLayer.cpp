@@ -197,6 +197,11 @@ namespace Hazel {
 		{
 			if (ImGui::BeginMenu("File"))
 			{
+				if (ImGui::MenuItem("Play Audio"))
+					// PlayAudio();
+
+				ImGui::Separator();
+
 				if (ImGui::MenuItem("Open Project...", "Ctrl+O"))
 					OpenProject();
 
@@ -770,6 +775,11 @@ namespace Hazel {
 			Entity newEntity = m_EditorScene->DuplicateEntity(selectedEntity);
 			m_SceneHierarchyPanel.SetSelectedEntity(newEntity);
 		}
+	}
+
+	void EditorLayer::PlayAudio()
+	{
+		AudioEngineCommand::Play();
 	}
 
 }

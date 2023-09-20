@@ -6,6 +6,8 @@
 #include "Hazel/Renderer/Renderer.h"
 #include "Hazel/Scripting/ScriptEngine.h"
 
+#include "Hazel/AudioEngine/AudioEngine.h"
+
 #include "Hazel/Core/Input.h"
 #include "Hazel/Utils/PlatformUtils.h"
 
@@ -29,6 +31,7 @@ namespace Hazel {
 		m_Window->SetEventCallback(HZ_BIND_EVENT_FN(Application::OnEvent));
 
 		Renderer::Init();
+		AudioEngine::Init();
 
 		m_ImGuiLayer = new ImGuiLayer();
 		PushOverlay(m_ImGuiLayer);
@@ -40,6 +43,7 @@ namespace Hazel {
 
 		ScriptEngine::Shutdown();
 		Renderer::Shutdown();
+		AudioEngine::Shutdown();
 	}
 
 	void Application::PushLayer(Layer* layer)

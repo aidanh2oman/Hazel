@@ -11,6 +11,10 @@
 
 #include "Hazel/ImGui/ImGuiLayer.h"
 
+
+
+// #include "Hazel/vendor/tracktion_engine/modules/juce/modules/juce_events/messages/juce_ApplicationBase.h"
+
 int main(int argc, char** argv);
 
 namespace Hazel {
@@ -66,6 +70,7 @@ namespace Hazel {
 		ApplicationSpecification m_Specification;
 		Scope<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
+		
 		bool m_Running = true;
 		bool m_Minimized = false;
 		LayerStack m_LayerStack;

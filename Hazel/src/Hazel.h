@@ -38,3 +38,8 @@
 
 #include "Hazel/Renderer/OrthographicCamera.h"
 // -----------------------------------
+
+// ---Audio Engine--------------------
+#include "Hazel/AudioEngine/AudioEngine.h"
+#include "Hazel/AudioEngine/AudioEngineCommand.h"
+// -----------------------------------

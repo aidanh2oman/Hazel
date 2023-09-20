@@ -46,6 +46,8 @@ namespace Hazel {
 
 		void OnDuplicateEntity();
 
+		void PlayAudio();
+
 		// UI Panels
 		void UI_Toolbar();
 	private:
